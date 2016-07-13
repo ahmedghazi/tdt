@@ -8,7 +8,7 @@ var config = {
     app: {
       name: 'todotricks'
     },
-    port: 3000,
+    port: 3006,
     db: 'mongodb://localhost/todotricks-development'
   },
 
@@ -17,7 +17,7 @@ var config = {
     app: {
       name: 'todotricks'
     },
-    port: 3000,
+    port: 3006,
     db: 'mongodb://localhost/todotricks-test'
   },
 
@@ -26,7 +26,7 @@ var config = {
     app: {
       name: 'todotricks'
     },
-    port: 3000,
+    port: 3006,
     db: 'mongodb://localhost/todotricks-production'
   }
 };
