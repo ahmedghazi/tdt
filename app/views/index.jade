@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    h2 Create yours
+    form(method="post" action="/c" class="create")
+        .form-group.row
+            .span6
+                input(type="text" class="form-control" id="" name="name" placeholder="Name")
+            .span6
+                input(type="email" class="form-control" id="" name="email" placeholder="E-mail")
+   
+        .form-group.repeater
+            include inc/input-repeat
+   
+        .form-group.row
+            .span6
+            .span6
+                button(type="button" class="btn btn-default add-row") +
+   
+        .form-group.row
+            .span6
+            .span6
+                input(type="submit" class="btn btn-default" value="Submit") 

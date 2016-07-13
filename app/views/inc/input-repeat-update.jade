@@ -1,0 +1,12 @@
+-var cl = "";
+if trick.status == true
+    -cl = "success";
+fieldset(class="row #{cl}" id="#{trick._id}")    
+    .span6
+        input(type="text" class="form-control" id="" name="tricks[]" value="#{trick.name}" readonly)
+    if trick.status == false
+        .span6
+            button(type="button" class="btn btn-default validate-row") ✓
+    else
+        .span6
+            button(type="button" class="btn btn-default validate-row" disabled) ✓

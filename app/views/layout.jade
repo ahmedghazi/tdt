@@ -1,0 +1,23 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width')
+    title= title
+    block css
+      link(rel='stylesheet', href='/css/reset.css')
+      link(rel='stylesheet', href='/css/style.css')
+    block js
+      if ENV_DEVELOPMENT
+        script(src='http://localhost:35729/livereload.js')
+  body
+
+    include header
+    
+    section(class="hidden")
+      block content
+
+    include footer
+
+    script(type='text/javascript', src='/js/jquery.min.js')
+    script(type='text/javascript', src='/js/functions.js')

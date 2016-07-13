@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    
+    //pre #{user}
+    .row
+        .span3
+            .row
+                span #{user.name}
+            .row
+                span Crée le #{moment(user.createdAt).format('LLL')}
+            .row
+                span Mise à jour le #{moment(user.updatedAt).format('LLL')}
+
+        .span9
+            .row
+                h2 MY TRICK LIST
+            form(method="post" action="/u/#{user._id}" class="create")
+            
+                .form-group.repeater
+                    each trick in user.tricks
+                        include inc/input-repeat-update
+            
+                
+
+    
+

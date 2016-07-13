@@ -1,0 +1,302 @@
+@font-face {
+  font-family: 'Atlas Grotesk Web';
+  src: url('../fonts/AtlasGrotesk-Medium-Web.eot');
+  src: url('../fonts/AtlasGrotesk-Medium-Web.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/AtlasGrotesk-Medium-Web.woff') format('woff'),
+     url('../fonts/AtlasGrotesk-Medium-Web.ttf') format('truetype'),
+     url('../fonts/AtlasGrotesk-Medium-Web.svg#AtlasGrotesk-Medium') format('svg');
+  font-weight:  500;
+  font-style:   normal;
+  font-stretch: normal;
+}
+a {
+	color: blue;
+}
+/* all */
+::-webkit-input-placeholder { color:blue; font-weight: 400 }
+::-moz-placeholder { color:blue; font-weight: 400  }
+:-ms-input-placeholder { color:blue; font-weight: 400  }
+input:-moz-placeholder { color:blue; font-weight: 400  }
+input:focus, textarea:focus{
+  border: none;
+}
+textarea{
+  width: 100%;
+  padding: 20px;
+  color: blue;
+  border: 3px solid;
+}
+textarea:focus{
+  border: 3px solid;
+}
+button:focus {outline:0;}
+
+.float_left{float: left;}
+.float_right{float: right;}
+.align_right{text-align: right;}
+
+pre{
+	padding-top: 60px;
+}
+h1,h2,h3,h4{font-weight: 400;}
+select{
+  background: transparent;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  height: 34px;
+  
+  color: blue;
+  border: 3px solid;
+
+}
+.ilsep{
+  width: 10px;
+  display: inline-block;
+}
+
+body.loading {
+	cursor: wait;
+}
+body {
+	padding: 0; margin: 0;
+	font: 16px 'Atlas Grotesk Web', Helvetica, Arial, sans-serif;
+	line-height: 1;
+	height: 100%;
+	color: blue;
+}
+
+header{
+	position: fixed;
+	top:0px;
+	padding: 20px 20px 15px;
+	background-color: white;
+	width:100%;
+  	z-index: 1;
+  
+}
+
+section{
+	margin-top: 53px;
+  	margin-bottom: 82px;
+	padding: 0 20px;
+}
+
+footer{
+	position: fixed;
+	bottom:0px;
+	padding: 20px;
+	width:100%;
+	background-color: white;
+  	z-index: 1;
+}
+
+body.loading #loader{display: block;}
+#loader{
+  position: fixed; top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.9); 
+  background-image:url(/img/tsbst-logo-200.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: wait;
+  display: none;
+}
+
+.offside_top{
+	-webkit-transform: translate3d(0,-88px,0);   /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translate3d(0,-88px,0);   /* IE 9 */
+            transform: translate3d(0,-88px,0);   /* Firefox 16+, IE 10+, Opera */
+}
+.offside_bottom{
+	-webkit-transform: translate3d(0,54px,0);   /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translate3d(0,54px,0);   /* IE 9 */
+            transform: translate3d(0,54px,0);   /* Firefox 16+, IE 10+, Opera */
+}
+
+.sepBlue{height: 3px; background-color: blue;}
+.sepWhite{height: 3px; background-color: white;}
+.sep10{height: 10px;}
+.sep20{height: 20px;}
+
+.row{
+  display: block;
+  /*padding: 10px 0 6px 0;*/
+  padding: 10px 0;
+}
+
+.fiboA{
+	width: calc(100% - (100% / 1.618));
+	display: inline-block;
+	vertical-align: top;
+}
+.fiboB{
+	width: calc(100% / 1.618);
+	display: inline-block;
+	vertical-align: top;
+}
+
+p{margin-bottom: 1em;}
+p:last-child{margin-bottom: 0;}
+
+.border,
+.btn{
+  border: 3px solid;
+}
+
+input:focus{border: 3px solid;}
+input,
+button{
+	background-color: transparent;
+	vertical-align: top;
+}
+fieldset{padding: 0}
+
+.pad10{padding: 10px; display: inline-block; width: 100%;}
+/*------------------------------------*\
+    HEADER
+\*------------------------------------*/
+h1{
+}
+nav li{
+	float: left;
+	margin-right: 10px;
+	min-width: 100px;
+}
+
+.sort{padding-left: 5px;}
+#s_btn{cursor: pointer;}
+#s_btn:hover{color: black;}
+/*------------------------------------*\
+    FOOTER
+\*------------------------------------*/
+footer li{
+	float: right;
+	margin-left: 10px;
+}
+/*------------------------------------*\
+    LISTE
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    SUBMIT
+\*------------------------------------*/
+form .row{padding: 10px 0}
+form input{
+    width: 100%;
+    padding: 10px;
+    color: blue;
+    border: 3px solid;
+}
+.span3{
+	width: calc(100% / 3);
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	overflow: hidden;
+	-o-text-overflow: ellipsis; /* pour Opera 9 */
+	text-overflow: ellipsis; /* pour le reste du monde */
+	white-space: nowrap;
+}
+.span6{
+	width: calc(~"100% / 2 - 10px");
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	overflow: hidden;
+	-o-text-overflow: ellipsis; /* pour Opera 9 */
+	text-overflow: ellipsis; /* pour le reste du monde */
+	white-space: nowrap;
+}
+.span9{
+	width: calc(~"100% - 33.3333%");
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	overflow: hidden;
+	-o-text-overflow: ellipsis; /* pour Opera 9 */
+	text-overflow: ellipsis; /* pour le reste du monde */
+	white-space: nowrap;
+}
+form .span6:nth-child(1){margin-right: 20px;}
+form .span3 input{width: calc(~"100% - 10px");}
+form .span3:not(.last):nth-child(3) input{width: calc(~"100% - 54px");}
+
+form textarea{padding: 10px;}
+form button{
+    border: none;
+    color: blue;
+    
+    padding: 10px;
+    
+    cursor: pointer;
+}
+form input[type=submit]:hover{background: black;}
+
+form input[type=submit]{
+    background: blue; color: white;
+    width: 100%;
+    border-color: blue;
+}
+form input[type=submit]:hover{
+    color: white; background-color: black; border-color: black;
+
+}
+
+.form-row{position: relative;}
+.form-row .hvr{
+    position: absolute;
+    top: 10px;
+    opacity: 0.2;
+}
+.form-row:hover .hvr{opacity: 1}
+
+
+.add-row{color: blue; width: 100%!important}
+.add-row:hover{background-color: blue; color: white; border-color: blue;}
+.remove-row{color: red; width: 100%!important}
+.remove-row:hover{background-color: red; color: white; border-color: red;}
+
+.validate-row{color: green; width: 100%!important}
+.validate-row:hover{background-color: green; color: white; border-color: green;}
+
+.repeater input{
+	
+}
+
+fieldset.success input{background-color: blue; color: white; border-color: blue;}
+fieldset.success .validate-row{background-color: green; color: white; border-color: green; cursor:auto}
+
+form ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: blue;
+}
+form ::-moz-placeholder { /* Firefox 19+ */
+  color: blue;
+}
+form :-ms-input-placeholder { /* IE 10+ */
+  color: blue;
+}
+form :-moz-placeholder { /* Firefox 18- */
+  color: blue;
+}
+
+
+@media all and (orientation:portrait) {
+  #rotate{display: block}
+}
+@media all and (orientation:landscape) {
+  #rotate{display: none}
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (max-width: 768px) {
+  
+}
+
+
