@@ -29,7 +29,8 @@ module.exports = function(app, config) {
 
   //app.locals.moment = require('moment');
   app.locals.moment = require('moment');
-  app.locals.moment.locale("fr");
+  //app.locals.moment.locale("fr");
+  app.locals.root_url = "http://localhost:3006";
 
   var controllers = glob.sync(config.root + '/app/controllers/*.js');
   controllers.forEach(function (controller) {

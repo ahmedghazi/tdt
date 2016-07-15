@@ -1,12 +1,41 @@
+/*
 @font-face {
   font-family: 'Atlas Grotesk Web';
   src: url('../fonts/AtlasGrotesk-Medium-Web.eot');
-  src: url('../fonts/AtlasGrotesk-Medium-Web.eot?#iefix') format('embedded-opentype'), url('../fonts/AtlasGrotesk-Medium-Web.woff') format('woff'), url('../fonts/AtlasGrotesk-Medium-Web.ttf') format('truetype'), url('../fonts/AtlasGrotesk-Medium-Web.svg#AtlasGrotesk-Medium') format('svg');
+  src: url('../fonts/AtlasGrotesk-Medium-Web.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/AtlasGrotesk-Medium-Web.woff') format('woff'),
+     url('../fonts/AtlasGrotesk-Medium-Web.ttf') format('truetype'),
+     url('../fonts/AtlasGrotesk-Medium-Web.svg#AtlasGrotesk-Medium') format('svg');
+  font-weight:  500;
+  font-style:   normal;
+  font-stretch: normal;
+}
+*/
+/* DRUK! */
+/* Druk Medium */
+@font-face {
+  font-family: 'Druk Web';
+  src: url('../fonts/Druk-Medium-Web.eot');
+  src: url('../fonts/Druk-Medium-Web.eot?#iefix') format('embedded-opentype'), url('../fonts/Druk-Medium-Web.woff') format('woff'), url('../fonts/Druk-Medium-Web.ttf') format('truetype'), url('../fonts/Druk-Medium-Web.svg#Druk Web') format('svg');
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
 }
+/* Druk Wide Super */
+@font-face {
+  font-family: 'Druk Wide Web';
+  src: url('../fonts/DrukWide-Super-Web.eot');
+  src: url('../fonts/DrukWide-Super-Web.eot?#iefix') format('embedded-opentype'), url('../fonts/DrukWide-Super-Web.woff') format('woff'), url('../fonts/DrukWide-Super-Web.ttf') format('truetype'), url('../fonts/DrukWide-Super-Web.svg#Druk Wide Web') format('svg');
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+}
 a {
+  color: blue;
+}
+a:hover,
+a:active {
+  text-decoration: none;
   color: blue;
 }
 /* all */
@@ -75,13 +104,16 @@ select {
   width: 10px;
   display: inline-block;
 }
+pre {
+  padding-top: 9.5px;
+}
 body.loading {
   cursor: wait;
 }
 body {
   padding: 0;
   margin: 0;
-  font: 16px 'Atlas Grotesk Web', Helvetica, Arial, sans-serif;
+  font: 15px 'Druk Wide Web', Helvetica, Arial, sans-serif;
   line-height: 1;
   height: 100%;
   color: blue;
@@ -89,15 +121,15 @@ body {
 header {
   position: fixed;
   top: 0px;
-  padding: 20px 20px 15px;
+  padding: 30px 30px 26px;
   background-color: white;
   width: 100%;
   z-index: 1;
 }
 section {
-  margin-top: 53px;
+  margin-top: 73px;
   margin-bottom: 82px;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 footer {
   position: fixed;
@@ -115,12 +147,10 @@ body.loading #loader {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  background-image: url(/img/tsbst-logo-200.gif);
-  background-position: center;
-  background-repeat: no-repeat;
+  background: rgba(0, 0, 255, 0.2);
   cursor: wait;
   display: none;
+  z-index: 2;
 }
 .offside_top {
   -webkit-transform: translate3d(0, -88px, 0);
@@ -151,11 +181,6 @@ body.loading #loader {
 }
 .sep20 {
   height: 20px;
-}
-.row {
-  display: block;
-  /*padding: 10px 0 6px 0;*/
-  padding: 10px 0;
 }
 .fiboA {
   width: calc(38.19530284%);
@@ -193,9 +218,40 @@ fieldset {
   display: inline-block;
   width: 100%;
 }
+.hr3blue {
+  height: 3px;
+  margin: 15px 0 34px;
+  background-color: blue;
+}
+/*------------------------------------*\
+    RESET BOOTSTRAP
+\*------------------------------------*/
+h1,
+h2,
+h3 {
+  font-size: 1em;
+  margin: 0;
+}
+.form-group {
+  margin-bottom: 0;
+}
+.form-control,
+.btn {
+  border: 3px solid;
+  border-radius: 0;
+  padding: 15px;
+  height: auto;
+  opacity: 1;
+}
+.form-control {
+  color: blue;
+}
 /*------------------------------------*\
     HEADER
 \*------------------------------------*/
+h1 {
+  font-family: 'Druk Wide Web';
+}
 nav li {
   float: left;
   margin-right: 10px;
@@ -224,7 +280,7 @@ footer li {
     SUBMIT
 \*------------------------------------*/
 form .row {
-  padding: 10px 0;
+  margin-bottom: 30px;
 }
 form input {
   width: 100%;
@@ -311,6 +367,11 @@ form input[type=submit]:hover {
 .form-row:hover .hvr {
   opacity: 1;
 }
+.add-row,
+.remove-row {
+  font-weight: bold;
+  font-size: 16px;
+}
 .add-row {
   color: blue;
   width: 100% !important;
@@ -338,32 +399,54 @@ form input[type=submit]:hover {
   color: white;
   border-color: green;
 }
-fieldset.success input {
+.update fieldset input {
   background-color: blue;
   color: white;
   border-color: blue;
+}
+fieldset.success input {
+  background-color: green;
+  color: white;
+  border-color: green;
 }
 fieldset.success .validate-row {
   background-color: green;
   color: white;
   border-color: green;
-  cursor: auto;
+}
+.form-control[disabled],
+.form-control[readonly],
+.btn[disabled] {
+  opacity: 1;
+}
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  background-color: blue;
+}
+fieldset.success .form-control[readonly] {
+  background-color: green;
 }
 form ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: blue;
+  color: blue !important;
 }
 form ::-moz-placeholder {
   /* Firefox 19+ */
-  color: blue;
+  color: blue !important;
 }
 form :-ms-input-placeholder {
   /* IE 10+ */
-  color: blue;
+  color: blue !important;
 }
 form :-moz-placeholder {
   /* Firefox 18- */
-  color: blue;
+  color: blue !important;
+}
+.form-control:focus {
+  border-color: blue !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 @media all and (orientation: portrait) {
   #rotate {

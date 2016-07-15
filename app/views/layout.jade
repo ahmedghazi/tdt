@@ -6,6 +6,8 @@ html(lang='en')
     title= title
     block css
       link(rel='stylesheet', href='/css/reset.css')
+      link(rel='stylesheet', href='/css/bootstrap.min.css')
+      link(rel='stylesheet', href='/css/font-awesome.min.css')
       link(rel='stylesheet', href='/css/style.css')
     block js
       if ENV_DEVELOPMENT
@@ -14,8 +16,9 @@ html(lang='en')
 
     include header
     
-    section(class="hidden")
-      block content
+    .container-fluid
+      section(class="hidden")
+        block content
 
     include footer
 
