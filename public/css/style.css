@@ -134,7 +134,7 @@ section {
 footer {
   position: fixed;
   bottom: 0px;
-  padding: 20px;
+  padding: 30px;
   width: 100%;
   background-color: white;
   z-index: 1;
@@ -459,3 +459,11 @@ form :-moz-placeholder {
   }
 }
 /* Responsive: Portrait tablets and up */
+@media screen and (max-width: 768px) {
+  .create .col-md-6 {
+    margin-bottom: 15px;
+  }
+  fieldset .col-md-6 {
+    margin-bottom: 15px;
+  }
+}
